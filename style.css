@@ -1,0 +1,33 @@
+/* style.css - simple modern responsive styling */
+:root{
+  --max-width: 1000px;
+  --accent: #0b74de;
+  --bg: #f7f9fb;
+  --text: #111827;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:var(--text); background:var(--bg); line-height:1.5}
+.container{max-width:var(--max-width); margin:0 auto; padding:2rem}
+.site-header{background:#fff; border-bottom:1px solid #e6eef8; position:sticky; top:0; z-index:50}
+.site-header .container{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.name{margin:0; font-size:1.2rem}
+.nav a{margin-left:1rem; text-decoration:none; color:var(--text); font-weight:600; opacity:0.85}
+.hero{padding:6rem 0; background:linear-gradient(180deg, #ffffff 0%, #f0f6ff 100%)}
+.hero h2{font-size:2rem; margin:0 0 .5rem}
+.hero p{margin:0 0 1rem; opacity:0.85}
+.cta{display:inline-block; padding:.6rem 1rem; background:var(--accent); color:#fff; text-decoration:none; border-radius:8px}
+.panel{padding:3rem 0}
+.skills-list{display:flex; flex-wrap:wrap; gap:.6rem; list-style:none; padding:0; margin:0}
+.skills-list li{background:#fff; padding:.6rem .9rem; border-radius:8px; box-shadow:0 1px 3px rgba(12,20,40,.04)}
+.projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem}
+.project{background:#fff; padding:1rem; border-radius:10px; box-shadow:0 6px 18px rgba(12,20,40,.06)}
+.project h4{margin:.2rem 0 .6rem}
+form{display:grid; gap:.6rem; max-width:540px}
+label{display:flex; flex-direction:column; font-weight:600; gap:.4rem}
+input, textarea{padding:.6rem; border:1px solid #dbe7fb; border-radius:8px; background:#fff}
+button{padding:.6rem 1rem; background:var(--accent); color:#fff; border:0; border-radius:8px; cursor:pointer}
+.site-footer{padding:1.2rem 0; text-align:center; color:#6b7280; font-size:.9rem}
+@media (max-width:600px){
+  .site-header .container{flex-direction:column; align-items:flex-start}
+  .nav{margin-top:.6rem}
+}
